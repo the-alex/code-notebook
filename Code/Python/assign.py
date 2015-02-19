@@ -1,8 +1,9 @@
 import time
 import random
+import sys
 
 # These two lines open a file and load each line into a separate index.
-textFile = open("challeges.txt", "r")
+textFile = open(sys.args[1], "r")
 challenges = textFile.readlines()
 # Remove the newline
 for x in xrange(len(challenges)):

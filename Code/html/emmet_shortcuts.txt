@@ -1,0 +1,1 @@
+div.container.post-container>div.row>div.col-md-2.post-info>table>(tr>th{Post #}+td{42})+(tr>th{Date}+td{3/14/15})+(tr>th{Feeling}+td{Drunk})
