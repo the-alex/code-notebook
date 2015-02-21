@@ -2,6 +2,7 @@
 # unique characters in it. What if you cannot use additional
 # data structures?
 
+
 def all_chars_unique(string):
     charsSoFar = dict()
     for char in string:
@@ -10,6 +11,7 @@ def all_chars_unique(string):
         else:
             charsSoFar[char] = True
     return True
+
 
 def no_extra_data_structures(string):
     # The complexity takes a hit, but I believe this is the
@@ -24,45 +26,41 @@ def no_extra_data_structures(string):
     return True
 
 
-# Tests for all_chars_unique
+print "Tests for all_chars_unique"
 unique = ["abc", "dfg", "asfuih"]
 nonUnique = ["rawr", "asda", "aaa"]
 
-# Expecting all True
+print "Expecting all True"
 for string in unique:
-    result = all_chars_unique(string)
-    if result != True:
-        print "Failed on input", string
+    if all_chars_unique(string):
+        print "True on input", string
     else:
-        print "Passed on input", string
+        print "False on input", string
 
+print
 
-# Expecting all False
+print "Expecting all False"
 for string in nonUnique:
-    result = all_chars_unique(string)
-    if result != False:
-        print "Failed on input", string
+    if all_chars_unique(string):
+        print "True on input", string
     else:
-        print "Passed on input", string
+        print "False on input", string
 
+print
 
-
-# Tests for no_extra_data_structures
-
-# Expecting all True
+print "Tests for no_extra_data_structures"
+print "Expecting all True"
 for string in unique:
-    result = no_extra_data_structures(string)
-    if result != True:
-        print "Failed on input", string
+    if no_extra_data_structures(string):
+        print "True on input", string
     else:
-        print "Passed on input", string
+        print "False on input", string
 
+print
 
-# Expecting all False
+print "Expecting all False"
 for string in nonUnique:
-    result = no_extra_data_structures(string)
-    if result != False:
-        print "Failed on input", string
+    if no_extra_data_structures(string):
+        print "True on input", string
     else:
-        print "Passed on input", string
-
+        print "False on input", string
