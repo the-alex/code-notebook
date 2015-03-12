@@ -1,4 +1,5 @@
 // TickerScrambler.js v0.1, Copyright (c) 2014 Lukasz Antkiewcz, MIT License
+//                       All credit goes to this guy ^
 function TickerScrambler(element, options) {
     if (!element) return;
     if (element.nodeType != 1) return;

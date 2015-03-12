@@ -1,6 +1,10 @@
 from collections import deque
 
 
+def cartesian (lists):
+    if lists == []: return [()]
+    return [x + (y,) for x in cartesian(lists[:-1]) for y in lists[-1]]
+
 
 # The following function is based off of a recursive permutation algorithm
 # I used on my TSP solution.
@@ -22,7 +26,7 @@ def gen_perms(inSuffix, inPrefix = [], runningStructure = []):
     return runningStructure
 
 def main():
-    rawr = [1, 2, 3, 4]
+    rawr =  ['-', 'R', 'B']
 
     for p in gen_perms(rawr):
         print p

@@ -1,10 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <queue>
-
 using namespace std;
-
-
 
 void gen_permutations(stack<int>& prefix, queue<int>& suffix) {
     if(suffix.empty()) {
@@ -29,10 +26,10 @@ void gen_permutations(stack<int>& prefix, queue<int>& suffix) {
 int main(int argc, char* argv[]) {
     stack<int> prefix;
     queue<int> suffix;
+
     for (int i = 0; i < 3; ++i) {
         suffix.push(i);
     }
 
     gen_permutations(prefix, suffix);
-
 }
