@@ -1,3 +1,7 @@
+# You might wanna consider the itertools library.
+# [element for element in itertools.product(range(2), repeat=3)]
+
+
 def print_rows(matrix):
     for row in matrix:
         print(row)
@@ -35,6 +39,7 @@ def print_rows(matrix):
 #
 # It's like the opposite of mapping reducibility!
 
+
 def case_perms(string):
     # In the other function, we knew the bit length. Here,
     # we'll have to find it by looping through the string to
@@ -43,7 +48,6 @@ def case_perms(string):
     # Get the indicies of the non-alpha characters in the
     # string. We're gonna gen the strings and then just
     # add the non-alpha characters after we have the perms.
-
 
     char_length = max([i for i in range(len(string)) if string[i].isalpha()])
 
@@ -56,11 +60,7 @@ def case_perms(string):
     for index in range(num_strings):
         case_strings.append([])
 
-
-
-
     return case_strings
-
 
 
 def bit_perms(bit_length):
