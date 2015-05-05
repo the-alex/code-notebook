@@ -14,6 +14,7 @@ module.exports = function (dir, extString, callback) {
         // If there is an error, terminate early ...
         if (err) {
             // ... specifically, with the 'err' parameter on the callback that was passed in.
+            //      We're passing it "up" the callback chain.
             return callback(err)
         }
 
@@ -30,7 +31,6 @@ module.exports = function (dir, extString, callback) {
         //  SideNote :: Notice the idiomatic parameters. We're setting err == null and the data section
         //  to the motified data value we created in this function.
         callback(null, data)
-
     })
-
 }
+
