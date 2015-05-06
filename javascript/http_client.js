@@ -6,10 +6,9 @@ var http = require('http');
 http.get(datURL, function (response) {
     response.setEncoding('utf8');
     // When the data becomes available on the response object, do this ...
-    response.on("data", function (data) {
-        data.forEach(function (datum) {
-            console.log(datum);
-        });
+    response.on('data', function (data) {
+        console.log(data);
     });
+    response.on('error', console.error);
 });
 
